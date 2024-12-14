@@ -3,6 +3,7 @@ import OptionsAPIExample from '../components/APIOptionsExample.vue'
 import CompositionAPIExample from '../components/APICompositionExample.vue'
 import HelloWorld from '../components/HelloWorld.vue'
 import CounterComponent from '../components/CounterComponent.vue'
+import ComputedProperty from '@/components/ComputedProperty.vue'
 </script>
 
 <template>
@@ -21,6 +22,10 @@ import CounterComponent from '../components/CounterComponent.vue'
     <br />
     <h2>HelloWorld Component</h2>
     <HelloWorld msg="Test Msg" />
+    <br />
+    <br />
+    <h2>Computed Property</h2>
+    <ComputedProperty />
   </main>
 </template>
 
