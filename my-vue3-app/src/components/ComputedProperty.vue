@@ -1,4 +1,6 @@
 <script setup lang="ts">
+//https://vuejs.org/guide/essentials/computed.html
+
 import { ref, reactive, computed } from 'vue'
 
 const author = reactive({

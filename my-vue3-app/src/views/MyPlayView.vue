@@ -4,6 +4,7 @@ import CompositionAPIExample from '../components/APICompositionExample.vue'
 import HelloWorld from '../components/HelloWorld.vue'
 import CounterComponent from '../components/CounterComponent.vue'
 import ComputedProperty from '@/components/ComputedProperty.vue'
+import ConditionalRendering from '@/components/ConditionalRendering.vue'
 </script>
 
 <template>
@@ -26,6 +27,9 @@ import ComputedProperty from '@/components/ComputedProperty.vue'
     <br />
     <h2>Computed Property</h2>
     <ComputedProperty />
+    <br />
+    <h2>Conditonal Rendering</h2>
+    <ConditionalRendering />
   </main>
 </template>
 
