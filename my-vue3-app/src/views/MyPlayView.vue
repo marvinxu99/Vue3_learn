@@ -5,6 +5,7 @@ import HelloWorld from '../components/HelloWorld.vue'
 import CounterComponent from '../components/CounterComponent.vue'
 import ComputedProperty from '@/components/ComputedProperty.vue'
 import ConditionalRendering from '@/components/ConditionalRendering.vue'
+import ListRendering from '@/components/ListRendering.vue'
 </script>
 
 <template>
@@ -30,6 +31,8 @@ import ConditionalRendering from '@/components/ConditionalRendering.vue'
     <br />
     <h2>Conditonal Rendering</h2>
     <ConditionalRendering />
+    <br />
+    <list-rendering />
   </main>
 </template>
 
