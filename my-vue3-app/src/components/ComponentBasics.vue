@@ -4,6 +4,7 @@
 import { ref } from 'vue'
 import BlogPost from './BlogPost.vue'
 import AlertBox from './AlertBox.vue'
+import TSExampleComponent from './TSExampleComponent.vue'
 
 const count = ref(0)
 
@@ -34,4 +35,6 @@ const enlargeFont = () => {
     />
   </div>
   <AlertBox type="error"> Something bad happened. </AlertBox>
+  <br />
+  <TSExampleComponent title="hello world!" :likes="40" />
 </template>
