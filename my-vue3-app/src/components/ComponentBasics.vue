@@ -4,9 +4,14 @@
 import { ref } from 'vue'
 import BlogPost from './BlogPost.vue'
 import AlertBox from './AlertBox.vue'
-import TSExampleComponent from './TSExampleComponent.vue'
+import TSPropsExample from './TSPropsExample.vue'
+import EventValidation from './EventValidation.vue'
+import VModelExample from './VModelExample.vue'
+import VModelExample2 from './VModelExample2.vue'
+import VModelModifier from './VModelModifier.vue'
+import FallthroughAttributes from './FallthroughAttributes.vue'
 
-const count = ref(0)
+const count = ref(10)
 
 const posts = ref([
   { id: 1, title: 'My journey with Vue' },
@@ -19,6 +24,16 @@ const postFontSize = ref(1)
 const enlargeFont = () => {
   postFontSize.value = postFontSize.value > 3 ? 1 : postFontSize.value + 0.1
 }
+
+const onSubmit = (payload: { email: string; password: string }) => {
+  console.log('Submitted payload:', payload)
+  return payload.email.includes('@') // Example validation
+}
+
+const firstName = ref('first')
+const lastName = ref('last')
+
+const myText = ref('myText')
 </script>
 
 <template>
@@ -36,5 +51,19 @@ const enlargeFont = () => {
   </div>
   <AlertBox type="error"> Something bad happened. </AlertBox>
   <br />
-  <TSExampleComponent title="hello world!" :likes="40" />
+  <TSPropsExample title="hello world!" :likes="40" greeting-message="Hi, good morning!" />
+
+  <TSPropsExample />
+
+  <EventValidation @submit="onSubmit" />
+
+  <VModelExample v-model="count" />
+  <br />
+
+  <VModelExample2 v-model:first-name="firstName" v-model:last-name="lastName" />
+
+  <p>Parent value: {{ myText }}</p>
+  <VModelModifier class="fake-class" style="margin-left: 20px" v-model.capitalize="myText" />
+
+  <FallthroughAttributes class="fake-class test" style="color: red" />
 </template>
