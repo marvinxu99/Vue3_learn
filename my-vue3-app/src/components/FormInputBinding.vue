@@ -22,7 +22,7 @@ const options = ref([
 <template>
   <h2>Form Input Binding</h2>
 
-  <input :value="text" @input="(event) => (text = event.target.value)" />
+  <input :value="text" @input="(event) => (text = (event.target as HTMLInputElement).value)" />
   <p>text = {{ text }}</p>
 
   <p>text2 is: {{ text2 }}</p>

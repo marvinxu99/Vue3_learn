@@ -12,8 +12,10 @@ import HelloWorld from './components/HelloWorld.vue'
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/myplayview">My Play View</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/myplayview">My Play View</RouterLink>
+        <RouterLink to="/component">Component Example</RouterLink>
+        <RouterLink to="/tabbedview">Tabbed Components</RouterLink>
       </nav>
     </div>
   </header>
@@ -37,6 +39,10 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: left; /* Center items horizontally */
+  gap: 1rem; /* Add spacing between items */
 }
 
 nav a.router-link-exact-active {

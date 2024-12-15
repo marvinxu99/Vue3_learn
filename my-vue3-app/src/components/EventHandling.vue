@@ -3,7 +3,7 @@
 
 import { ref } from 'vue'
 
-function warn(message, event) {
+function warn(message: string, event: Event) {
   // now we have access to the native event
   if (event) {
     event.preventDefault()
@@ -23,6 +23,6 @@ const text = ref('input')
   <!-- using inline arrow function -->
   <button @click="(event) => warn('Form cannot be submitted yet.', event)">Submit</button>
 
-  <input :value="text" @input="(event) => (text = event.target.value)" />
+  <input v-model="text" />
   <p>text = {{ text }}</p>
 </template>
