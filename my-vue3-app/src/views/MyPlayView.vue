@@ -6,6 +6,10 @@ import CounterComponent from '../components/CounterComponent.vue'
 import ComputedProperty from '@/components/ComputedProperty.vue'
 import ConditionalRendering from '@/components/ConditionalRendering.vue'
 import ListRendering from '@/components/ListRendering.vue'
+import EventHandling from '@/components/EventHandling.vue'
+import FormInputBinding from '@/components/FormInputBinding.vue'
+import WatchersExample from '@/components/WatchersExample.vue'
+import TemplateRefExample from '@/components/TemplateRefExample.vue'
 </script>
 
 <template>
@@ -33,6 +37,14 @@ import ListRendering from '@/components/ListRendering.vue'
     <ConditionalRendering />
     <br />
     <list-rendering />
+    <br />
+    <EventHandling />
+    <br />
+    <FormInputBinding />
+    <br />
+    <WatchersExample />
+    <br />
+    <TemplateRefExample />
   </main>
 </template>
 
