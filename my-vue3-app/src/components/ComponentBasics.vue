@@ -10,6 +10,9 @@ import VModelExample from './VModelExample.vue'
 import VModelExample2 from './VModelExample2.vue'
 import VModelModifier from './VModelModifier.vue'
 import FallthroughAttributes from './FallthroughAttributes.vue'
+import FancyButton from './FancyButton.vue'
+import AwesomeIcon from './AwesomeIcon.vue'
+import NamedSlot from './NamedSlot.vue'
 
 const count = ref(10)
 
@@ -66,4 +69,25 @@ const myText = ref('myText')
   <VModelModifier class="fake-class" style="margin-left: 20px" v-model.capitalize="myText" />
 
   <FallthroughAttributes class="fake-class test" style="color: red" />
+
+  <FancyButton>Click Me</FancyButton>
+  <FancyButton>
+    <span style="color: cyan">Click me! </span>
+    <AwesomeIcon />
+  </FancyButton>
+  <FancyButton />
+
+  <NamedSlot>
+    <template #header>
+      <h1>Here might be a page title</h1>
+    </template>
+
+    <!-- implicit default slot -->
+    <p>A paragraph for the main content.</p>
+    <p>And another one.</p>
+
+    <template #footer>
+      <p>Here's some contact info</p>
+    </template>
+  </NamedSlot>
 </template>
