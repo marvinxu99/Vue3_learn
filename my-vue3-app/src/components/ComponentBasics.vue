@@ -13,6 +13,7 @@ import FallthroughAttributes from './FallthroughAttributes.vue'
 import FancyButton from './FancyButton.vue'
 import AwesomeIcon from './AwesomeIcon.vue'
 import NamedSlot from './NamedSlot.vue'
+import FancyList from './FancyList.vue'
 
 const count = ref(10)
 
@@ -90,4 +91,14 @@ const myText = ref('myText')
       <p>Here's some contact info</p>
     </template>
   </NamedSlot>
+
+  <FancyList api-url="/api/items" :per-page="10">
+    <template #item="{ body, username, likes }">
+      <div>
+        <h3>{{ body }}</h3>
+        <p>By: {{ username }}</p>
+        <p>Likes: {{ likes }}</p>
+      </div>
+    </template>
+  </FancyList>
 </template>
