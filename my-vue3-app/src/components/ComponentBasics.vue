@@ -1,7 +1,8 @@
 <script setup lang="ts">
 // https://vuejs.org/guide/essentials/component-basics.html
 
-import { ref } from 'vue'
+import { ref, provide } from 'vue'
+
 import BlogPost from './BlogPost.vue'
 import AlertBox from './AlertBox.vue'
 import TSPropsExample from './TSPropsExample.vue'
@@ -14,6 +15,7 @@ import FancyButton from './FancyButton.vue'
 import AwesomeIcon from './AwesomeIcon.vue'
 import NamedSlot from './NamedSlot.vue'
 import FancyList from './FancyList.vue'
+import ChildComponent from './ChildComponent.vue'
 
 const count = ref(10)
 
@@ -38,6 +40,11 @@ const firstName = ref('first')
 const lastName = ref('last')
 
 const myText = ref('myText')
+
+// by providing a ref, the GrandChild
+// can react to changes happening here.
+const message = ref('hello')
+provide('message', message)
 </script>
 
 <template>
@@ -101,4 +108,8 @@ const myText = ref('myText')
       </div>
     </template>
   </FancyList>
+
+  <h3>Provide - inject demo</h3>
+  <input v-model="message" />
+  <ChildComponent />
 </template>
