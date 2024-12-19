@@ -16,6 +16,8 @@ import AwesomeIcon from './AwesomeIcon.vue'
 import NamedSlot from './NamedSlot.vue'
 import FancyList from './FancyList.vue'
 import ChildComponent from './ChildComponent.vue'
+import ComposableExample1 from './ComposableExample1.vue'
+import ComposableExample2 from './ComposableExample2.vue'
 
 const count = ref(10)
 
@@ -45,6 +47,17 @@ const myText = ref('myText')
 // can react to changes happening here.
 const message = ref('hello')
 provide('message', message)
+
+// There may be times when we need to update the data from an injector component.
+// In such cases, we recommend providing a function that is responsible for mutating the state
+const location = ref('North Pole')
+function updateLocation() {
+  location.value = 'South Pole'
+}
+provide('location', {
+  location,
+  updateLocation,
+})
 </script>
 
 <template>
@@ -111,5 +124,10 @@ provide('message', message)
 
   <h3>Provide - inject demo</h3>
   <input v-model="message" />
+  <p>Location at parent level: {{ location }}</p>
   <ChildComponent />
+  <br />
+  <ComposableExample1 />
+  <br />
+  <ComposableExample2 />
 </template>
