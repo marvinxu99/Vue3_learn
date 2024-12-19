@@ -18,6 +18,7 @@ import FancyList from './FancyList.vue'
 import ChildComponent from './ChildComponent.vue'
 import ComposableExample1 from './ComposableExample1.vue'
 import ComposableExample2 from './ComposableExample2.vue'
+import ComposableExample3 from './ComposableExample3.vue'
 
 const count = ref(10)
 
@@ -130,4 +131,6 @@ provide('location', {
   <ComposableExample1 />
   <br />
   <ComposableExample2 />
+  <br />
+  <ComposableExample3 />
 </template>

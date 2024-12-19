@@ -6,6 +6,7 @@ export function useMouse(target: { value: EventTarget | null } = { value: window
 
   const updateMousePosition = (event: Event) => {
     const mouseEvent = event as MouseEvent
+
     if (target.value instanceof HTMLElement) {
       const rect = target.value.getBoundingClientRect()
       x.value = mouseEvent.clientX - rect.left // X position relative to the box
