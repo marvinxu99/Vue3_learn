@@ -31,6 +31,14 @@ const router = createRouter({
       component: () => import('../views/ComponentExamples.vue'),
     },
     {
+      path: '/compodemo',
+      name: 'compodemo',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ComponentDemos.vue'),
+    },
+    {
       path: '/tabbedview',
       name: 'tabbedview',
       // route level code-splitting
