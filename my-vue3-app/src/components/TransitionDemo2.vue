@@ -8,9 +8,23 @@ const docState = ref('saved')
   <span style="margin-right: 20px">Click to cycle through states:</span>
   <div class="btn-container">
     <Transition name="slide-up" mode="out-in">
-      <button v-if="docState === 'saved'" @click="docState = 'edited'">Edit</button>
-      <button v-else-if="docState === 'edited'" @click="docState = 'editing'">Save</button>
-      <button v-else-if="docState === 'editing'" @click="docState = 'saved'">Cancel</button>
+      <button class="btn-abso-position" v-if="docState === 'saved'" @click="docState = 'edited'">
+        Edit
+      </button>
+      <button
+        class="btn-abso-position"
+        v-else-if="docState === 'edited'"
+        @click="docState = 'editing'"
+      >
+        Save
+      </button>
+      <button
+        class="btn-abso-position"
+        v-else-if="docState === 'editing'"
+        @click="docState = 'saved'"
+      >
+        Cancel
+      </button>
     </Transition>
   </div>
 </template>
@@ -22,7 +36,7 @@ const docState = ref('saved')
   height: 1em;
 }
 
-button {
+.btn-abso-position {
   position: absolute;
 }
 
