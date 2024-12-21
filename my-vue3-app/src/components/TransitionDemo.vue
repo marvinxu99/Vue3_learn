@@ -20,7 +20,7 @@ const show = ref(true)
   </Transition>
 </template>
 
-<style scope>
+<style scoped>
 /* we will explain what these classes do next! */
 .v-enter-active,
 .v-leave-active {
