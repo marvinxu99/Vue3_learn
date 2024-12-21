@@ -8,6 +8,7 @@ import TransitionDemo from './TransitionDemo.vue'
 import TransitionDemo2 from './TransitionDemo2.vue'
 import TransitionGroupDemo from './TransitionGroupDemo.vue'
 import TransitionGroupDemo2 from './TransitionGroupDemo2.vue'
+import KeepAliveDemo from './KeepAliveDemo.vue'
 </script>
 
 <template>
@@ -21,4 +22,6 @@ import TransitionGroupDemo2 from './TransitionGroupDemo2.vue'
   <TransitionGroupDemo />
   <br />
   <TransitionGroupDemo2 />
+  <br />
+  <KeepAliveDemo />
 </template>
