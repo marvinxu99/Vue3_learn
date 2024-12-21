@@ -1,12 +1,21 @@
 <script setup lang="ts">
 // https://vuejs.org/guide/essentials/component-basics.html
 
-//import { ref, provide } from 'vue'
+// import { ref } from 'vue'
 
 import PluginExample1 from './PluginExample1.vue'
+import TransitionDemo from './TransitionDemo.vue'
+import TransitionDemo2 from './TransitionDemo2.vue'
+import TransitionGroupDemo from './TransitionGroupDemo.vue'
 </script>
 
 <template>
   <h3>Component Demo Page</h3>
   <PluginExample1 />
+  <br />
+  <TransitionDemo />
+  <br />
+  <TransitionDemo2 />
+  <br />
+  <TransitionGroupDemo />
 </template>
