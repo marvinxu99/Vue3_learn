@@ -5,4 +5,10 @@ describe('My First Test', () => {
     cy.visit('/')
     cy.contains('h1', 'You did it!')
   })
+
+  it('navigates to About page', () => {
+    cy.visit('/')
+    cy.get('a[href="/about"]').click()
+    cy.url().should('include', '/about')
+  })
 })
