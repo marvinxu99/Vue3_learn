@@ -9,7 +9,8 @@ const attrs = useAttrs()
 console.log(attrs)
 
 const filteredAttrs = computed(() => {
-  const { class: _, ...rest } = attrs // Exclude the `class` attribute
+  const rest = { ...attrs } // Exclude the `class` attribute
+  delete rest.class
   return rest
 })
 </script>

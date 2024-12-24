@@ -6,7 +6,7 @@ const answer = ref('Questions usually contain a question mark. ;-)')
 const loading = ref(false)
 
 // watch works directly on a ref
-watch(question, async (newQuestion, oldQuestion) => {
+watch(question, async (newQuestion) => {
   if (newQuestion.includes('?')) {
     loading.value = true
     answer.value = 'Thinking...'

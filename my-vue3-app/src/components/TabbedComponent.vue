@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Home from './Home.vue'
-import Posts from './Posts.vue'
-import Archive from './Archive.vue'
+import Home from './HomeComponent.vue'
+import Posts from './PostsComponent.vue'
+import Archive from './ArchiveComponent.vue'
 import { ref } from 'vue'
 
 const currentTab = ref('Home')

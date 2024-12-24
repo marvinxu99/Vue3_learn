@@ -3,10 +3,10 @@ import { ref } from 'vue'
 
 // const props = defineProps(['api-url', 'per-page'])
 // Define props with TypeScript types
-const props = defineProps<{
-  'api-url': string
-  'per-page': number
-}>()
+// const props = defineProps<{
+//   'api-url': string
+//   'per-page': number
+// }>()
 
 const items = ref([])
 const loading = ref(true)
